@@ -1,0 +1,56 @@
+/* The header bar of the page*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  /* 因为header导航栏是基于屏幕进行定位，所以要做单独的padding挤压处理 */
+  padding-right: constant(safe-area-inset-right);
+  padding-left: constant(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
+  background-color: #2889e8;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+header .content-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+  font-size: 0.4267rem;
+}
+
+header .scroll-box {
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: -30px;
+  padding-bottom: 30px;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+}
+
+header ul {
+  display: flex;
+  flex: row nowrap;
+  width: 120%;
+  background-color: #2889e8;
+  box-sizing: border-box;
+  padding: 0 0.2667rem;
+}
+
+header ul li {
+  padding: 0 0.1067rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.active {
+  color: #2889e8;
+  background-color: #ffffff;
+}

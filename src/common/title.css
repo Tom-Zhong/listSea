@@ -1,0 +1,8 @@
+/* a style of descript the title*/
+
+.guide {
+  border-left: 0.1067rem solid rgb(79, 141, 255);
+  padding-left: 0.1067rem;
+  font-size: 0.4267rem;
+  margin: 0.4267rem 0 0.2667rem;
+}

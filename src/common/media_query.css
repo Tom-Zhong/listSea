@@ -1,0 +1,95 @@
+/* the media query is used for the various screen of the resolution ratio*/
+
+@media only screen and (min-width: 641px) {
+  html,
+  body {
+    font-size: 72px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  html,
+  body {
+    font-size: 64px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  html,
+  body {
+    font-size: 54px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  html,
+  body {
+    font-size: 41.4px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html,
+  body {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  html,
+  body {
+    font-size: 37.5px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  html,
+  body {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 32px;
+  }
+}
+
+
+/* query screen used for iPhone X, just use for adapting the safe area*/
+
+
+/* 竖屏底下的查询 */
+
+@media screen and (orientation: portrait) {
+  body {
+    /* 防止页面被刘海遮住 */
+    padding-top: constant(safe-area-inset-top);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    /* support IOS 11*/
+    padding-right: constant(safe-area-inset-right);
+    padding-left: constant(safe-area-inset-left);
+    /* support IOS 11.2*/
+    padding-right: env(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+  }
+}

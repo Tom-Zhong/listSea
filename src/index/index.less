@@ -1,0 +1,673 @@
+@import url("../common/common.css");
+@import url("../common/media_query.css");
+@import url("../common/header.css");
+@import url("../common/title.css");
+/* 所有列表项的容器 */
+.container {
+    background: #fff;
+    margin-top: 1.2rem;
+    padding: 0 10px;
+    a:link, a:visited, a:hover, a:active{
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    // 第一种形式
+    .first-list-wrapper{
+      .list-item {
+        border-bottom: 1px solid #e5e5e5;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;      
+        a {
+          display: flex;
+          flex-flow: row nowrap;
+          
+          // left img-container
+          .img-wrap {
+            width: 3.6rem;
+            height: 2.0267rem;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+            img {
+              display: block;
+              height: 100%;
+              min-width: 100%;
+            }
+            .rank-num {
+              font-size: 0.3733rem;
+              color: #fff;
+              display: block;
+              height: 0.5333rem;
+              width: 0.5333rem;
+              position: absolute;
+              left: 0;
+              top: 0;
+              span {
+                display: block;
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              &:after {
+                content: " ";
+                display: block;
+                height: 0;
+                width: 0;
+                border-top: .96rem solid #9e9ea3;
+                border-right: .96rem solid rgba(0, 0, 0, 0);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+              }
+            }
+          }
+          // right item-detail-info
+          .info {
+            padding-left: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            color: #303031;
+            .title-wrap{
+              overflow: hidden;
+              .title {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                font-weight: 400;
+                font-size: 0.3733rem;
+              }
+            }
+            
+            .author {
+              font-size: 0.32rem;
+              color: #67676b;
+            }
+            .about-info {
+              margin-top: 4px;
+              font-size: 0.32rem;
+              color: #9e9ea2;
+              display: flex;
+              flex-flow: row nowrap;
+              .icon {
+                display: block;
+                width: 0.48rem;
+                height: 0.48rem;
+              }
+            }
+          }
+        }
+          
+      }
+    }
+    // 第二种形式
+    .second-list-wrapper {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        .list-item {
+            width: 100%; //继承父类宽度
+            display: flex; //使用表格布局
+            justify-content: space-between;
+            align-items: center;
+            min-height: 2.08rem; //设定最小高度
+            border-bottom: 1px solid #e5e5e5; // 数字排名标签容器，前三个背景有不一样的背景
+            .link {
+                display: flex;
+                align-items: center;
+                .rank-wrap {
+                    width: 0.48rem;
+                    vertical-align: middle;
+                    padding-right: 0.266667rem;
+                    position: relative;
+                    // 排名（用来填充数字类型的数据,
+                    // 注：背景颜色默认是灰色，如果需要给前三个元素添加背景色，请使用下面的first,second,third类。
+                    .rank {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        margin-top: -0.24rem;
+                        display: block;
+                        min-width: 0.48rem;
+                        max-width: 0.693333rem;
+                        font-size: 0.373333rem;
+                        line-height: 0.48rem;
+                        text-align: center;
+                        background-color: #9e9ea2;
+                        border-radius: 0.053333rem;
+                        color: #ffffff;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    } // 数字第一种背景
+                    .rank.first {
+                        background: #fe4153;
+                    } // 数字第二种背景
+                    .rank.second {
+                        background: #fe9e41;
+                    } // 数字第三种背景
+                    .rank.third {
+                        background: #f8be32;
+                    }
+                } // up主图片容器
+                .img-wrap {
+                    width: 1.28rem;
+                    vertical-align: middle; //垂直居中
+                    padding-right: 0.266667rem; // up主图片
+                    .img {
+                        display: block;
+                        height: 1.28rem;
+                        width: 100%;
+                        border-radius: 0.64rem;
+                    }
+                } 
+                .info-wrap {
+                    vertical-align: middle; //垂直居中
+                    .info {
+                        // 姓名，已经进行字数限制为15个字以内
+                        .name {
+                            font-size: 0.4rem;
+                            line-height: 0.56rem;
+                            color: #303031;
+                            font-weight: normal;
+                            margin: 0;
+                            padding: 0;
+                            margin-bottom: 0.16rem;
+                            max-width: 5.2rem;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        } 
+                        // 类型
+                        .type-wrap {
+                            font-size: 0;
+                            width: 4.64rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            position: relative;
+                            // 类型，字数控制在三个左右
+                            .type {
+                                text-align: center;
+                                display: inline-block;
+                                font-size: 0.32rem;
+                                line-height: 0.533333rem;
+                                margin-right: 0.16rem;
+                                color: #b8b8ba;
+                                border: 1px solid #b8b8ba;
+                                border-radius: 0.08rem;
+                                width: 1rem;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            } 
+            // 关注按钮
+            .focus-btn {
+                font-family: 'Helvetica', 'sans-serif';
+                a {
+                    box-sizing: border-box;
+                    display: block;
+                    width: 1.6rem;
+                    font-size: 0.346667rem;
+                    height: 0.666667rem;
+                    line-height: 0.666667rem;
+                    text-align: center;
+                    border: 1px solid rgb(252, 85, 101);
+                    color: rgb(252, 85, 101);
+                    border-radius: 0.72rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+    } 
+    // 第三种形式
+    .third-list-wrapper {
+        width: 100%; 
+        .list-item {
+            box-sizing: border-box;
+            position: relative;
+            padding: 0.426667rem 0 0.266667rem;
+            border-bottom: 1px solid #e5e5e5;
+            width: 100%;
+            a.link {
+                display: flex; 
+                .img-wrap {
+                    position: relative;
+                    width: 2.186667rem;
+                    height: 2.96rem;
+                    padding-right: 0.266667rem; 
+                    flex-shrink: 0;
+                    //如果是带排名的元素直接赋予下面的".first",".second",".third";
+                    .film-rank-num {
+                        position: absolute;
+                        top: 0.08rem;
+                        left: 0.08rem;
+                        display: block;
+                        min-width: 0.48rem;
+                        max-width: 0.693333rem;
+                        height: 0.48rem;
+                        font-size: 0.373333rem;
+                        background-color: #9e9ea3;
+                        border-radius: 0.053333rem;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 0.48rem;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        max-width: 0.693333rem;
+                    } 
+                    // 下面三个分别为排名不一样的背景色
+                    .first {
+                        background-color: #fe4153;
+                    }
+                    .second {
+                        background-color: #fe9e41;
+                    }
+                    .third {
+                        background-color: #f8be32;
+                    } 
+                    img.img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                } 
+                .info-wrap {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between; 
+                    flex: 1;
+                    .content {
+                        display: flex;
+                        flex-flow: column nowrap; 
+                        .title {
+                            margin: 0;
+                            padding: 0;
+                            font-weight: 400;
+                            font-size: 0.453333rem;
+                            line-height: 0.64rem;
+                            height: 0.64rem;
+                            color: #303031;
+                            max-width: 5.44rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis; //字体裁剪
+                            white-space: nowrap; //不进行换行，强制在一行显示
+                        } 
+                        .chapter {
+                            height: 0.453333rem;
+                            font-size: 0; //清除所有标签换行后的换行符
+                            display: flex; //表现为flex布局，让元素的中心轴对齐。
+                            span {
+                                font-size: 0.32rem;
+                                line-height: 0.453333rem;
+                                color: #67676b;
+                            } 
+                            .update-count,
+                            .all-count {
+                                max-width: 0.96rem;
+                                overflow: hidden;
+                                text-overflow: ellipsis; //字体裁剪
+                                white-space: nowrap; //不进行换行，强制在一行显示
+                            } 
+                            .update-title,
+                            .update-count-word,
+                            .count-separator,
+                            .all-count-title,
+                            .all-count-word {
+                                display: inline;
+                            }
+                        } 
+
+                        .film-director-wrap {
+                            height: 0.453333rem;
+                            display: flex;
+                            font-size: 0; // 字体大小和行高设置
+                            span {
+                                font-size: 0.32rem;
+                                line-height: 0.453333rem;
+                                color: #67676b;
+                            } 
+                            
+                            .film-director {
+                                max-width: 3.84rem; //字符限制
+                                overflow: hidden;
+                                text-overflow: ellipsis; //字体裁剪
+                                white-space: nowrap; //不进行换行，强制在一行显示
+                            }
+                        }
+                        
+                        .film-actor-wrap {
+                            height: 0.453333rem;
+                            display: flex;
+                            font-size: 0; // 字体大小和行高设置
+                            span {
+                                font-size: 0.32rem;
+                                line-height: 0.453333rem;
+                                color: #67676b;
+                            } 
+                            //需要注入的数据，进行字符限制，已经限制在15个字符。
+                            .film-actor {
+                                max-width: 4.8rem; //字符限制
+                                overflow: hidden;
+                                text-overflow: ellipsis; //字体裁剪
+                                white-space: nowrap; //不进行换行，强制在一行显示
+                            }
+                        }
+                    } 
+                    .play-count-wrap {
+                        display: flex;
+                        font-size: 0;
+                        vertical-align: middle;
+                        span {
+                            font-size: 0.32rem;
+                            line-height: 0.373333rem;
+                            color: #67676b;
+                        }
+                        i {
+                            margin-right: 0.133333rem;
+                            display: inline-block;
+                            width: 0.3733rem;
+                            height: 0.3733rem;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        } 
+                        .all-play-count {
+                            max-width: 2.56rem; //字符限制
+                            overflow: hidden;
+                            text-overflow: ellipsis; //字体裁剪
+                            white-space: nowrap; //不进行换行，强制在一行显示
+                        } 
+                        .all-play-word {
+                            display: inline;
+                        }
+                    }
+                } // 豆瓣评分容器
+                .douban-grade-wrap {
+                    width: 1.226667rem;
+                    height: 1.226667rem;
+                    position: absolute; //定位到右上角
+                    right: 0.266667rem;
+                    top: 0.266667rem;
+                    padding-top: 0.16rem; //往下挤压部分空间
+                    background-color: #fff; // 防止文字盖住
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    display: flex; //使用fle布局
+                    flex-flow: column wrap;
+                    align-items: center; //让子元素居中显示
+                    //豆瓣标题
+                    .douban-title {
+                        font-size: 0.293333rem;
+                        line-height: 0.346667rem;
+                        color: #9e9ea2;
+                    } // 豆瓣评分
+                    .douban-grade {
+                        display: flex;
+                        align-items: baseline; //让元素基于底线对齐
+                        // 基础样式设计
+                        span {
+                            display: block;
+                            font-size: 0.346667rem;
+                            line-height: 0.586667rem;
+                            color: #fe4153;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            max-width: 0.346667rem;
+                        }
+                        .int-grade {
+                            font-size: 0.48rem;
+                            max-width: 0.48rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    // 第四种形式
+    .fourth-list-wrapper {
+        width: 100%; // 排行列表项
+        .list-item {
+            width: 100%;
+            position: relative; //让后面票房容器和豆瓣评分容器进行定位
+            display: flex;
+            font-size: 0;
+            box-sizing: border-box;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #e5e5e5;
+            .link {
+                width: 100%;
+                display: flex;
+                position: relative; // 电影图片容器
+                .img-wrap {
+                    position: relative;
+                    width: 2.186667rem;
+                    height: 2.96rem;
+                    padding-right: 0.266667rem; // 电影榜中排名,默认为灰色。也就是除了前三名以外的元素的默认排名颜色
+                    flex-shrink: 0; //如果是带排名的元素直接赋予下面的".first",".second",".third";
+                    .rank-num {
+                        position: absolute;
+                        top: 0.08rem;
+                        left: 0.08rem;
+                        display: block;
+                        min-width: 0.48rem;
+                        max-width: 0.693333rem;
+                        height: 0.48rem;
+                        font-size: 0.373333rem;
+                        background-color: #9e9ea3;
+                        border-radius: 0.053333rem;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 0.48rem;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        max-width: 0.693333rem;
+                    } // 下面三个分别为排名不一样的背景色
+                    .first {
+                        background-color: #fe4153;
+                    }
+                    .second {
+                        background-color: #fe9e41;
+                    }
+                    .third {
+                        background-color: #f8be32;
+                    } // 电影图片，这里需要注入图片数据，类名如下
+                    img.img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                } // 电影信息容器
+                .info-wrap {
+                    display: flex;
+                    flex-flow: column wrap; // 电影标题,已进行字数限制，最多12个字
+                    flex: 1;
+                    position: relative;
+                    z-index: 2;
+                    .title {
+                        margin: 0;
+                        padding: 0;
+                        font-size: 0.453333rem;
+                        line-height: 0.64rem;
+                        height: 0.64rem;
+                        color: #303031;
+                        font-weight: 400;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        max-width: 5.44rem;
+                        overflow: hidden;
+                        margin-bottom: 0.106667rem;
+                    } 
+                    .director-wrap {
+                        height: 0.48rem;
+                        font-size: 0; // 清除空格
+                        display: flex; // 基础字体样式设置
+                        span {
+                            font-size: 0.32rem;
+                            line-height: 0.48rem;
+                            color: #67676b;
+                        } //导演名字,已经字数限制，控制在12个字
+                        .film-director {
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            max-width: 5.44rem;
+                            overflow: hidden;
+                        }
+                    } 
+                    .actor-wrap {
+                        height: 0.48rem;
+                        font-size: 0; // 清除空格
+                        display: flex; // 基础字体样式设置
+                        span {
+                            font-size: 0.32rem;
+                            line-height: 0.48rem;
+                            color: #67676b;
+                            white-space: nowrap;
+                        } // 电影演员名字,已经进行字数限制，控制在15个字
+                        .film-actor {
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            max-width: 4.8rem;
+                            overflow: hidden;
+                        }
+                    } 
+                    .publish-date-wrap {
+                        height: 0.48rem;
+                        font-size: 0; // 清除空格
+                        display: flex; // 基础字体样式设置
+                        span {
+                            font-size: 0.32rem;
+                            line-height: 0.48rem;
+                            color: #67676b;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            max-width: 1.92rem;
+                            overflow: hidden;
+                        } 
+                        .publish-date {
+                            display: block; // max-width: 2.08rem;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    } 
+                    .all-sell-wrap {
+                        height: 0.48rem;
+                        font-size: 0; // 清除空格
+                        display: flex; // 基础字体样式设置
+                        span {
+                            font-size: 0.32rem;
+                            line-height: 0.48rem;
+                            color: #67676b;
+                        } // 电影时长，已经进行字数限制，控制在6个数字
+                        .sell-count {
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            max-width: 1.92rem;
+                            overflow: hidden;
+                        }
+                    }
+                } 
+                .sell-money-wrap {
+                    position: absolute; //使用绝对定位
+                    bottom: 0;
+                    right: 0;
+                    display: flex;
+                    background-color: rgb(252, 85, 101);
+                    .sell-money-box {
+                        z-index: 3;
+                        display: flex; // padding: 0 0.4rem;
+                        justify-content: center; //让所有span标签向居中显示
+                        align-items: baseline;
+                        // 基础字体样式设置
+                        transform: scale(0.916667);
+                        transform-origin: center;
+                        span {
+                            font-size: 0.346667rem;
+                            color: #ffffff;
+                            line-height: 0.72rem;
+                        } // 票房数字，这里已经进行字数限制为4位数
+                        .sell-money {
+                            display: block;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            max-width: 2.32rem;
+                            overflow: hidden;
+                            font-size: 0.48rem;
+                        }
+                        .sell-money-title {
+                            font-size: 0.32rem;
+                            margin-right: 2px;
+                        }
+                        .unit {
+                            font-size: 0.32rem;
+                            margin-left: 2px;
+                        }
+                    }
+                } // 豆瓣评分容器
+                .douban-grade-wrap {
+                    width: 1.226667rem;
+                    height: 1.226667rem;
+                    position: absolute; //定位到右上角
+                    right: 0;
+                    top: 0;
+                    background-color: #fff; // 防止文字盖住
+                    background-image: url(../img/score_bg.png); //使用背景图
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    display: flex; //使用fle布局
+                    flex-flow: column wrap;
+                    align-items: center; //让子元素居中显示
+                    justify-content: center;
+                    text-align: center; //豆瓣标题
+                    .douban-title {
+                        padding-top: 0.16rem; //往下挤压部分空间
+                        font-size: 0.293333rem;
+                        line-height: 0.346667rem;
+                        color: #9e9ea2;
+                    } // 豆瓣评分
+                    .douban-grade {
+                        display: flex;
+                        align-items: baseline; //让元素基于底线对齐
+                        // 基础样式设计
+                        span {
+                            font-size: 0.346667rem;
+                            line-height: 0.586667rem;
+                            color: #fe4153;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            max-width: 0.346667rem;
+                        }
+                        .int-grade {
+                            font-size: 0.48rem;
+                            max-width: 0.48rem;
+                        }
+                    }
+                    .no-score {
+                        font-size: 0.293333rem;
+                        line-height: 120%;
+                        color: #9e9ea2;
+                        max-width: 0.8rem;
+                        transform: scale(0.9166667);
+                    }
+                }
+            }
+        }
+    } 
+}
