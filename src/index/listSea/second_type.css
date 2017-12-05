@@ -1,0 +1,115 @@
+.second-list-wrapper {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.second-list-wrapper .list-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2.08rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.second-list-wrapper .list-item .link {
+  display: flex;
+  align-items: center;
+}
+.second-list-wrapper .list-item .link .rank-wrap {
+  width: 0.48rem;
+  vertical-align: middle;
+  padding-right: 0.266667rem;
+  position: relative;
+}
+.second-list-wrapper .list-item .link .rank-wrap .rank {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -0.24rem;
+  display: block;
+  min-width: 0.48rem;
+  max-width: 0.693333rem;
+  font-size: 0.373333rem;
+  line-height: 0.48rem;
+  text-align: center;
+  background-color: #9e9ea2;
+  border-radius: 0.053333rem;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.second-list-wrapper .list-item .link .rank-wrap .rank.first {
+  background: #fe4153;
+}
+.second-list-wrapper .list-item .link .rank-wrap .rank.second {
+  background: #fe9e41;
+}
+.second-list-wrapper .list-item .link .rank-wrap .rank.third {
+  background: #f8be32;
+}
+.second-list-wrapper .list-item .link .img-wrap {
+  width: 1.28rem;
+  vertical-align: middle;
+  padding-right: 0.266667rem;
+}
+.second-list-wrapper .list-item .link .img-wrap .img {
+  display: block;
+  height: 1.28rem;
+  width: 100%;
+  border-radius: 0.64rem;
+}
+.second-list-wrapper .list-item .link .info-wrap {
+  vertical-align: middle;
+}
+.second-list-wrapper .list-item .link .info-wrap .info .name {
+  font-size: 0.4rem;
+  line-height: 0.56rem;
+  color: #303031;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.16rem;
+  max-width: 5.2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.second-list-wrapper .list-item .link .info-wrap .info .type-wrap {
+  font-size: 0;
+  width: 4.64rem;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.second-list-wrapper .list-item .link .info-wrap .info .type-wrap .type {
+  text-align: center;
+  display: inline-block;
+  font-size: 0.32rem;
+  line-height: 0.533333rem;
+  margin-right: 0.16rem;
+  color: #b8b8ba;
+  border: 1px solid #b8b8ba;
+  border-radius: 0.08rem;
+  width: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.second-list-wrapper .list-item .focus-btn {
+  font-family: 'Helvetica', 'sans-serif';
+}
+.second-list-wrapper .list-item .focus-btn a {
+  box-sizing: border-box;
+  display: block;
+  width: 1.6rem;
+  font-size: 0.346667rem;
+  height: 0.666667rem;
+  line-height: 0.666667rem;
+  text-align: center;
+  border: 1px solid #fc5565;
+  color: #fc5565;
+  border-radius: 0.72rem;
+  margin: 0 auto;
+}

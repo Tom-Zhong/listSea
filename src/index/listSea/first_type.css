@@ -1,0 +1,89 @@
+.first-list-wrapper .list-item {
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 0.2667rem;
+}
+.first-list-wrapper .list-item a {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.first-list-wrapper .list-item a .img-wrap {
+  width: 3.6rem;
+  height: 2.0267rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.first-list-wrapper .list-item a .img-wrap img {
+  display: block;
+  height: 100%;
+  min-width: 100%;
+}
+.first-list-wrapper .list-item a .img-wrap .rank-num {
+  font-size: 0.3733rem;
+  color: #fff;
+  display: block;
+  height: 0.5333rem;
+  width: 0.5333rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.first-list-wrapper .list-item a .img-wrap .rank-num span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.first-list-wrapper .list-item a .img-wrap .rank-num:after {
+  content: " ";
+  display: block;
+  height: 0;
+  width: 0;
+  border-top: .96rem solid #9e9ea3;
+  border-right: 0.96rem solid rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.first-list-wrapper .list-item a .info {
+  padding-left: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #303031;
+}
+.first-list-wrapper .list-item a .info .title-wrap {
+  overflow: hidden;
+}
+.first-list-wrapper .list-item a .info .title-wrap .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-weight: 400;
+  font-size: 0.3733rem;
+}
+.first-list-wrapper .list-item a .info .author {
+  font-size: 0.32rem;
+  color: #67676b;
+}
+.first-list-wrapper .list-item a .info .about-info {
+  margin-top: 4px;
+  font-size: 0.32rem;
+  color: #9e9ea2;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.first-list-wrapper .list-item a .info .about-info .icon {
+  display: block;
+  width: 0.48rem;
+  height: 0.48rem;
+}

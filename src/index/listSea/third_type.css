@@ -1,0 +1,195 @@
+.third-list-wrapper {
+  width: 100%;
+}
+.third-list-wrapper .list-item {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.426667rem 0 0.266667rem;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+}
+.third-list-wrapper .list-item a.link {
+  display: flex;
+}
+.third-list-wrapper .list-item a.link .img-wrap {
+  position: relative;
+  width: 2.186667rem;
+  height: 2.96rem;
+  padding-right: 0.266667rem;
+  flex-shrink: 0;
+}
+.third-list-wrapper .list-item a.link .img-wrap .film-rank-num {
+  position: absolute;
+  top: 0.08rem;
+  left: 0.08rem;
+  min-width: 0.48rem;
+  height: 0.48rem;
+  font-size: 0.373333rem;
+  background-color: #9e9ea3;
+  border-radius: 0.053333rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.48rem;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0.693333rem;
+}
+.third-list-wrapper .list-item a.link .img-wrap .first {
+  background-color: #fe4153;
+}
+.third-list-wrapper .list-item a.link .img-wrap .second {
+  background-color: #fe9e41;
+}
+.third-list-wrapper .list-item a.link .img-wrap .third {
+  background-color: #f8be32;
+}
+.third-list-wrapper .list-item a.link .img-wrap img.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.third-list-wrapper .list-item a.link .info-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  flex: 1;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .title {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 0.453333rem;
+  line-height: 0.64rem;
+  height: 0.64rem;
+  color: #303031;
+  max-width: 5.44rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter {
+  height: 0.453333rem;
+  font-size: 0;
+  display: flex;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter span {
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  color: #67676b;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter .update-count,
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter .all-count {
+  max-width: 0.96rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter .update-title,
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter .update-count-word,
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter .count-separator,
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter .all-count-title,
+.third-list-wrapper .list-item a.link .info-wrap .content .chapter .all-count-word {
+  display: inline;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .film-director-wrap {
+  height: 0.453333rem;
+  display: flex;
+  font-size: 0;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .film-director-wrap span {
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  color: #67676b;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .film-director-wrap .film-director {
+  max-width: 3.84rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .film-actor-wrap {
+  height: 0.453333rem;
+  display: flex;
+  font-size: 0;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .film-actor-wrap span {
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  color: #67676b;
+}
+.third-list-wrapper .list-item a.link .info-wrap .content .film-actor-wrap .film-actor {
+  max-width: 4.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.third-list-wrapper .list-item a.link .info-wrap .play-count-wrap {
+  display: flex;
+  font-size: 0;
+  vertical-align: middle;
+}
+.third-list-wrapper .list-item a.link .info-wrap .play-count-wrap span {
+  font-size: 0.32rem;
+  line-height: 0.373333rem;
+  color: #67676b;
+}
+.third-list-wrapper .list-item a.link .info-wrap .play-count-wrap i {
+  margin-right: 0.133333rem;
+  display: inline-block;
+  width: 0.3733rem;
+  height: 0.3733rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.third-list-wrapper .list-item a.link .info-wrap .play-count-wrap .all-play-count {
+  max-width: 2.56rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.third-list-wrapper .list-item a.link .info-wrap .play-count-wrap .all-play-word {
+  display: inline;
+}
+.third-list-wrapper .list-item a.link .douban-grade-wrap {
+  width: 1.226667rem;
+  height: 1.226667rem;
+  position: absolute;
+  right: 0.266667rem;
+  top: 0.266667rem;
+  padding-top: 0.16rem;
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.third-list-wrapper .list-item a.link .douban-grade-wrap .douban-title {
+  font-size: 0.293333rem;
+  line-height: 0.346667rem;
+  color: #9e9ea2;
+}
+.third-list-wrapper .list-item a.link .douban-grade-wrap .douban-grade {
+  display: flex;
+  align-items: baseline;
+}
+.third-list-wrapper .list-item a.link .douban-grade-wrap .douban-grade span {
+  display: block;
+  font-size: 0.346667rem;
+  line-height: 0.586667rem;
+  color: #fe4153;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0.346667rem;
+}
+.third-list-wrapper .list-item a.link .douban-grade-wrap .douban-grade .int-grade {
+  font-size: 0.48rem;
+  max-width: 0.48rem;
+}

@@ -1,0 +1,30 @@
+.fifth-list-wrapper {
+  width: 100%;
+}
+.fifth-list-wrapper .list-item {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.2667rem 0;
+  border-bottom: 1px solid #f8f8f8;
+  box-sizing: border-box;
+}
+.fifth-list-wrapper .list-item:nth-child(1) {
+  border-top: 1px solid #f8f8f8;
+}
+.fifth-list-wrapper .list-item .left .name {
+  font-size: 0.3733rem;
+  color: #333333;
+}
+.fifth-list-wrapper .list-item .right .icon {
+  width: 0.48rem;
+  height: 0.48rem;
+  display: block;
+}

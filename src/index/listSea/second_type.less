@@ -1,0 +1,124 @@
+// 第二种形式
+.second-list-wrapper {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  .list-item {
+      width: 100%; //继承父类宽度
+      display: flex; //使用表格布局
+      justify-content: space-between;
+      align-items: center;
+      min-height: 2.08rem; //设定最小高度
+      border-bottom: 1px solid #e5e5e5; // 数字排名标签容器，前三个背景有不一样的背景
+      .link {
+          display: flex;
+          align-items: center;
+          .rank-wrap {
+              width: 0.48rem;
+              vertical-align: middle;
+              padding-right: 0.266667rem;
+              position: relative;
+              // 排名（用来填充数字类型的数据,
+              // 注：背景颜色默认是灰色，如果需要给前三个元素添加背景色，请使用下面的first,second,third类。
+              .rank {
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  margin-top: -0.24rem;
+                  display: block;
+                  min-width: 0.48rem;
+                  max-width: 0.693333rem;
+                  font-size: 0.373333rem;
+                  line-height: 0.48rem;
+                  text-align: center;
+                  background-color: #9e9ea2;
+                  border-radius: 0.053333rem;
+                  color: #ffffff;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+              } // 数字第一种背景
+              .rank.first {
+                  background: #fe4153;
+              } // 数字第二种背景
+              .rank.second {
+                  background: #fe9e41;
+              } // 数字第三种背景
+              .rank.third {
+                  background: #f8be32;
+              }
+          } // up主图片容器
+          .img-wrap {
+              width: 1.28rem;
+              vertical-align: middle; //垂直居中
+              padding-right: 0.266667rem; // up主图片
+              .img {
+                  display: block;
+                  height: 1.28rem;
+                  width: 100%;
+                  border-radius: 0.64rem;
+              }
+          } 
+          .info-wrap {
+              vertical-align: middle; //垂直居中
+              .info {
+                  // 姓名，已经进行字数限制为15个字以内
+                  .name {
+                      font-size: 0.4rem;
+                      line-height: 0.56rem;
+                      color: #303031;
+                      font-weight: normal;
+                      margin: 0;
+                      padding: 0;
+                      margin-bottom: 0.16rem;
+                      max-width: 5.2rem;
+                      text-overflow: ellipsis;
+                      overflow: hidden;
+                      white-space: nowrap;
+                  } 
+                  // 类型
+                  .type-wrap {
+                      font-size: 0;
+                      width: 4.64rem;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      position: relative;
+                      // 类型，字数控制在三个左右
+                      .type {
+                          text-align: center;
+                          display: inline-block;
+                          font-size: 0.32rem;
+                          line-height: 0.533333rem;
+                          margin-right: 0.16rem;
+                          color: #b8b8ba;
+                          border: 1px solid #b8b8ba;
+                          border-radius: 0.08rem;
+                          width: 1rem;
+                          text-overflow: ellipsis;
+                          overflow: hidden;
+                          white-space: nowrap;
+                          box-sizing: border-box;
+                      }
+                  }
+              }
+          }
+      } 
+      // 关注按钮
+      .focus-btn {
+          font-family: 'Helvetica', 'sans-serif';
+          a {
+              box-sizing: border-box;
+              display: block;
+              width: 1.6rem;
+              font-size: 0.346667rem;
+              height: 0.666667rem;
+              line-height: 0.666667rem;
+              text-align: center;
+              border: 1px solid rgb(252, 85, 101);
+              color: rgb(252, 85, 101);
+              border-radius: 0.72rem;
+              margin: 0 auto;
+          }
+      }
+  }
+} 
