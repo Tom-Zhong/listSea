@@ -1,0 +1,108 @@
+.list-container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 3.466667rem;
+}
+.list-container .list-scroll {
+  overflow: scroll;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  margin-top: -30px;
+  padding-bottom: 30px;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+}
+.list-container .list-scroll .movie-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}
+.list-container .list-scroll .movie-list .list-item {
+  padding-right: 0.133333rem;
+  width: 3.6rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-box-flex: 0;
+  -webkit-box-flex: 0;
+  box-flex: 0;
+  flex-shrink: 0;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  -moz-box-lines: multiple;
+  /*Firefox*/
+  -webkit-box-lines: multiple;
+  /*Safari,Opera,Chrome*/
+  box-lines: multiple;
+  flex-flow: column nowrap;
+}
+.list-container .list-scroll .movie-list .list-item .movie-img {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.026667rem;
+  overflow: hidden;
+}
+.list-container .list-scroll .movie-list .list-item .movie-img img {
+  width: 100%;
+  display: block;
+}
+.list-container .list-scroll .movie-list .list-item .movie-img .play-time {
+  position: absolute;
+  right: 0.106667rem;
+  bottom: 0.08rem;
+  display: block;
+  border-radius: 0.213333rem;
+  height: 0.373333rem;
+  min-width: 0.96rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 0;
+}
+.list-container .list-scroll .movie-list .list-item .movie-img .play-time span {
+  max-width: 1.066667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 0.373333rem;
+  display: inline-block;
+  color: #eeeeee;
+  font-size: 0.32rem;
+  -webkit-transform-origin-x: 50%;
+  -webkit-transform-origin-y: 50%;
+  -webkit-transform: scale(0.82);
+}
+.list-container .list-scroll .movie-list .list-item .movie-title-wrap {
+  flex: 1;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  border: 1px solid #e5e5e5;
+  padding-top: 0.266667rem;
+  padding-left: 0.08rem;
+}
+.list-container .list-scroll .movie-list .list-item .movie-title-wrap .movie-title {
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  color: #303031;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: normal;
+}
+.list-container .list-scroll .movie-list .playing .movie-img {
+  border: 1px solid #fe4153;
+}
+.list-container .list-scroll .movie-list .more-movie-item:last-child {
+  padding-right: 0;
+}
