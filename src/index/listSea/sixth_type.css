@@ -1,0 +1,94 @@
+.sixth-list-wrapper {
+  width: 100%;
+}
+.sixth-list-wrapper .list-item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0.2667rem 0;
+  border-bottom: 1px solid #f8f8f8;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.sixth-list-wrapper .list-item:nth-child(1) {
+  border-top: 1px solid #f8f8f8;
+}
+.sixth-list-wrapper .list-item .left {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  width: 60%;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.sixth-list-wrapper .list-item .left .intro .title {
+  font-size: 0.48rem;
+  color: #f7672e;
+}
+.sixth-list-wrapper .list-item .left .intro .info {
+  font-size: 0.32rem;
+}
+.sixth-list-wrapper .list-item .left .detail {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.sixth-list-wrapper .list-item .left .detail .demand {
+  font-size: 0.3733rem;
+}
+.sixth-list-wrapper .list-item .left .detail .demand span {
+  color: #f7672e;
+}
+.sixth-list-wrapper .list-item .left .detail .profit {
+  font-size: 0.32rem;
+}
+.sixth-list-wrapper .list-item .right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -moz-align-items: center;
+  -ms-flex-align: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.sixth-list-wrapper .list-item .right .btn {
+  margin-left: 0.5333rem;
+  display: block;
+  font-size: 0.3733rem;
+  padding: 0.1333rem 0.2667rem;
+  background-color: #f7672e;
+  color: #fff;
+  border-radius: 0.4rem;
+}

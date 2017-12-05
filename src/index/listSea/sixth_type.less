@@ -1,0 +1,97 @@
+.sixth-list-wrapper {
+  width: 100%;
+  .list-item {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;  
+    padding: 0.2667rem 0; 
+    border-bottom: 1px solid rgb(248, 248, 248);  
+    // do not be afraid of using the flex , its compatcity can use in Android 2.3 or IOS 4.  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    &:nth-child(1){
+      border-top: 1px solid rgb(248, 248, 248);
+    }
+    .left {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      width: 60%;
+      -ms-flex: 1;
+      flex: 1; 
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex; 
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      .intro {
+        .title {
+          font-size: 0.48rem;
+          color: #f7672e;
+        }
+        .info {
+          font-size: 0.32rem;
+        }
+      }
+      .detail {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex; 
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: end;
+        -moz-box-pack: end;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        .demand {
+          font-size: 0.3733rem;
+          span {
+            color: #f7672e;
+          }
+        }
+        .profit {
+          font-size: 0.32rem;
+        }
+      }
+    }
+    .right{
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex; 
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -moz-align-items: center;
+      -ms-flex-align: center;
+      -ms-align-items: center;
+      align-items: center;
+      .btn {
+        margin-left: 0.5333rem;
+        display: block;
+        font-size: 0.3733rem;
+        padding: 0.1333rem 0.2667rem;
+        background-color: rgb(247, 103, 46);
+        color: #fff;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+}
